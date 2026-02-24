@@ -28,6 +28,7 @@
       loader.classList.add('hidden');
       document.body.style.overflow = '';
       initAnimations();
+      setTimeout(() => { loader.style.display = 'none'; }, 600);
     }, 1500);
   });
 
@@ -35,39 +36,11 @@
   document.body.style.overflow = 'hidden';
 
   /* ──────────────────────────────────────────
-     CUSTOM CURSOR
-     ────────────────────────────────────────── */
-  const dot = document.getElementById('cursorDot');
-  const outline = document.getElementById('cursorOutline');
-  let mouseX = 0, mouseY = 0;
-  let outlineX = 0, outlineY = 0;
-
-  document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    dot.style.left = mouseX + 'px';
-    dot.style.top = mouseY + 'px';
-  });
-
-  function animateCursor() {
-    outlineX += (mouseX - outlineX) * 0.12;
-    outlineY += (mouseY - outlineY) * 0.12;
-    outline.style.left = outlineX + 'px';
-    outline.style.top = outlineY + 'px';
-    requestAnimationFrame(animateCursor);
-  }
-  animateCursor();
 
   document.querySelectorAll('a, button, .service-card, .review-card, .pillar').forEach((el) => {
     el.addEventListener('mouseenter', () => {
-      outline.style.width = '56px';
-      outline.style.height = '56px';
-      outline.style.borderColor = 'rgba(201,168,76,0.8)';
     });
     el.addEventListener('mouseleave', () => {
-      outline.style.width = '36px';
-      outline.style.height = '36px';
-      outline.style.borderColor = 'rgba(201,168,76,0.5)';
     });
   });
 
@@ -404,7 +377,6 @@
         btn.dataset.liked = 'true';
       }
     });
-    btn.style.cursor = 'none';
   });
 
   /* ──────────────────────────────────────────
