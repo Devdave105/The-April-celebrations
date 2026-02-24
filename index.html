@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The April Celebrations | Fine Dining & Luxury Events · Uyo</title>
+  <!-- Preconnect to external origins early -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+
+  <!-- Fonts: only the weights actually used, display=swap prevents FOIT -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&family=Josefin+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome: only the icon categories we actually use (solid + light + brands) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/solid.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/light.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/brands.min.css" />
+
+  <!-- Preload first slider image so hero doesn't flash -->
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1200&q=75" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-ring"></div>
+      <div class="loader-logo">
+        <span class="loader-monogram">TAC</span>
+        <span class="loader-tagline-spin">Curating Extraordinary Moments</span>
+      </div>
+      <div class="loader-messages">
+        <span class="lm active">Polishing the silverware...</span>
+        <span class="lm">Lighting the candles...</span>
+        <span class="lm">Chilling the champagne...</span>
+        <span class="lm">Your luxury awaits...</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- CUSTOM CURSOR -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-outline" id="cursorOutline"></div>
+
+  <!-- STICKY NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-mark">T<em>A</em>C</span>
+        <span class="logo-sub">The April Celebrations</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about"><i class="fa-light fa-sparkles"></i> About</a></li>
+        <li><a href="#slider"><i class="fa-light fa-images"></i> Gallery</a></li>
+        <li><a href="#services"><i class="fa-light fa-gem"></i> Services</a></li>
+        <li><a href="#menu"><i class="fa-light fa-utensils"></i> Menu</a></li>
+        <li><a href="#reviews"><i class="fa-light fa-star"></i> Reviews</a></li>
+        <li><a href="#contact"><i class="fa-light fa-location-dot"></i> Contact</a></li>
+        <li><a href="tel:+2347061773768" class="nav-cta"><i class="fa-light fa-phone"></i> Reserve</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+        <span class="ham-line"></span>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="drawer-inner">
+        <div class="drawer-logo">
+          <span class="logo-mark">T<em>A</em>C</span>
+        </div>
+        <ul class="drawer-links">
+          <li><a href="#about" class="d-link"><i class="fa-light fa-sparkles"></i><span>About</span></a></li>
+          <li><a href="#slider" class="d-link"><i class="fa-light fa-images"></i><span>Gallery</span></a></li>
+          <li><a href="#services" class="d-link"><i class="fa-light fa-gem"></i><span>Services</span></a></li>
+          <li><a href="#menu" class="d-link"><i class="fa-light fa-utensils"></i><span>Menu</span></a></li>
+          <li><a href="#reviews" class="d-link"><i class="fa-light fa-star"></i><span>Reviews</span></a></li>
+          <li><a href="#contact" class="d-link"><i class="fa-light fa-location-dot"></i><span>Contact</span></a></li>
+        </ul>
+        <a href="tel:+2347061773768" class="drawer-cta"><i class="fa-light fa-phone"></i> Book a Table</a>
+        <div class="drawer-socials">
+          <a href="https://instagram.com/theaprilsignature" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="mailto:chatwithtac@gmail.com"><i class="fa-light fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-gradient"></div>
+      <div class="hero-particles" id="heroParticles"></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow"><i class="fa-light fa-location-dot"></i> Ewet Housing Estate, Uyo · Since 2018</p>
+      <h1 class="hero-title">
+        <span class="ht-1">Where Every</span>
+        <span class="ht-2"><em>Moment</em></span>
+        <span class="ht-3">Becomes Legendary</span>
+      </h1>
+      <p class="hero-sub">Fine dining, luxury events and curated experiences in the heart of Uyo. Unapologetically beautiful, impeccably refined.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn-primary"><i class="fa-light fa-calendar-check"></i> Reserve Your Table</a>
+        <a href="#slider" class="btn-ghost"><i class="fa-light fa-play-circle"></i> Explore the Space</a>
+      </div>
+
+      <!-- STATS -->
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-num" data-target="5000">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Guests Served</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="300">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Events Hosted</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-num" data-target="6">0</span><span class="stat-plus">+</span>
+          <span class="stat-label">Years of Excellence</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TICKER -->
+    <div class="ticker-wrap">
+      <div class="ticker-track" id="tickerTrack">
+        <span><i class="fa-light fa-star-sharp"></i> Fine Dining</span>
+        <span><i class="fa-light fa-flower"></i> Luxury Events</span>
+        <span><i class="fa-light fa-spa"></i> Sunshine Spa</span>
+        <span><i class="fa-light fa-martini-glass"></i> Eden Bay London</span>
+        <span><i class="fa-light fa-camera"></i> Photography Sessions</span>
+        <span><i class="fa-light fa-crown"></i> Business Casual &amp; Formal Only</span>
+        <span><i class="fa-light fa-clock"></i> Open Daily 8AM – 10PM</span>
+        <span><i class="fa-light fa-envelope"></i> chatwithtac@gmail.com</span>
+        <span><i class="fa-light fa-phone"></i> +234 706 177 3768</span>
+        <span><i class="fa-light fa-star-sharp"></i> Fine Dining</span>
+        <span><i class="fa-light fa-flower"></i> Luxury Events</span>
+        <span><i class="fa-light fa-spa"></i> Sunshine Spa</span>
+        <span><i class="fa-light fa-martini-glass"></i> Eden Bay London</span>
+        <span><i class="fa-light fa-camera"></i> Photography Sessions</span>
+        <span><i class="fa-light fa-crown"></i> Business Casual &amp; Formal Only</span>
+        <span><i class="fa-light fa-clock"></i> Open Daily 8AM – 10PM</span>
+        <span><i class="fa-light fa-envelope"></i> chatwithtac@gmail.com</span>
+        <span><i class="fa-light fa-phone"></i> +234 706 177 3768</span>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <i class="fa-light fa-chevron-down"></i>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-img-frame">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&q=75" alt="The April Celebrations Interior" loading="lazy" />
+            <div class="frame-badge">
+              <i class="fa-light fa-award"></i>
+              <span>Award-Winning Dining</span>
+            </div>
+          </div>
+          <div class="about-accent-card">
+            <i class="fa-light fa-gem"></i>
+            <p>"Unapologetically<br/><em>Beautiful</em>"</p>
+          </div>
+        </div>
+
+        <div class="about-copy">
+          <p class="section-eyebrow"><i class="fa-light fa-sparkles"></i> Our Story</p>
+          <h2 class="section-title">More Than a Restaurant.<br/><em>A Mood. A Movement.</em></h2>
+          <p class="about-text">The April Celebrations — known intimately as <strong>The April Signature</strong> — was born from an obsession with beauty, refinement, and the belief that every meal deserves to be a memory. Nestled in the prestigious Ewet Housing Estate in Uyo, we've crafted a sanctuary where Plum Noir tones, floral motifs, and candlelit intimacy collide with world-class cuisine.</p>
+          <p class="about-text">Our signature restaurant, <em>Eden Bay London</em>, brings globally-inspired flavors to your plate, while our Sunshine Spa ensures you leave lighter than you arrived. This isn't just dining — this is an experience you will wear on your soul for years.</p>
+
+          <div class="about-pillars">
+            <div class="pillar">
+              <i class="fa-light fa-utensils"></i>
+              <span>Fine Dining</span>
+            </div>
+            <div class="pillar">
+              <i class="fa-light fa-glass-champagne"></i>
+              <span>Premium Bar</span>
+            </div>
+            <div class="pillar">
+              <i class="fa-light fa-spa"></i>
+              <span>Wellness Spa</span>
+            </div>
+            <div class="pillar">
+              <i class="fa-light fa-party-horn"></i>
+              <span>Event Hosting</span>
+            </div>
+          </div>
+
+          <a href="#services" class="btn-primary"><i class="fa-light fa-arrow-right"></i> Discover Our Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMAGE SLIDER -->
+  <section class="slider-section" id="slider">
+    <p class="section-eyebrow centered"><i class="fa-light fa-images"></i> The Experience</p>
+    <h2 class="section-title centered">Step Inside <em>The April World</em></h2>
+
+    <div class="slider-wrapper">
+      <div class="slider-track" id="sliderTrack">
+
+        <!-- Slide 1 -->
+        <div class="slide active">
+        <!-- Slide 1: preloaded above, smaller fetch -->
+        <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1200&q=75')"></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <span class="slide-tag"><i class="fa-light fa-star-sharp"></i> Fine Dining</span>
+            <h3 class="slide-title">Eden Bay London</h3>
+            <p class="slide-desc">World-class flavours curated for the most discerning palates. Every plate is art. Every bite is memory.</p>
+            <a href="#menu" class="btn-ghost-sm"><i class="fa-light fa-utensils"></i> View the Menu</a>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide">
+          <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1200&q=75')"></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <span class="slide-tag"><i class="fa-light fa-party-horn"></i> Events</span>
+            <h3 class="slide-title">Private Events & Celebrations</h3>
+            <p class="slide-desc">From intimate birthdays to grand corporate galas — we transform spaces into masterpieces. Every detail, obsessed over.</p>
+            <a href="#contact" class="btn-ghost-sm"><i class="fa-light fa-calendar-check"></i> Plan Your Event</a>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide">
+          <div class="slide-bg" style="background-image: url('https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=1200&q=75')"></div>
+          <div class="slide-overlay"></div>
+          <div class="slide-content">
+            <span class="slide-tag"><i class="fa-light fa-spa"></i> Wellness</span>
+            <h3 class="slide-title">Sunshine Spa</h3>
+            <p class="slide-desc">A sanctuary of calm nestled within our establishment. Rejuvenate, reset and rise. Luxury wellness in the heart of Uyo.</p>
+            <a href="#contact" class="btn-ghost-sm"><i class="fa-light fa-spa"></i> Book a Session</a>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="slider-btn prev" id="sliderPrev"><i class="fa-light fa-chevron-left"></i></button>
+      <button class="slider-btn next" id="sliderNext"><i class="fa-light fa-chevron-right"></i></button>
+
+      <div class="slider-dots" id="sliderDots">
+        <button class="dot active" data-idx="0"></button>
+        <button class="dot" data-idx="1"></button>
+        <button class="dot" data-idx="2"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services section" id="services">
+    <div class="container">
+      <p class="section-eyebrow centered"><i class="fa-light fa-gem"></i> What We Offer</p>
+      <h2 class="section-title centered">Luxury, Crafted <em>For You</em></h2>
+      <p class="section-sub centered">Three distinct pillars of excellence under one prestigious roof in Ewet Housing Estate, Uyo.</p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-light fa-utensils"></i></div>
+          <div class="service-glow"></div>
+          <h3>Eden Bay London</h3>
+          <p>Our flagship fine dining restaurant brings London-inspired contemporary cuisine to Uyo. Expect multicourse tasting menus, locally-sourced ingredients elevated to global standards, and an ambience that makes every visit feel like a special occasion.</p>
+          <ul class="service-features">
+            <li><i class="fa-light fa-check"></i> Multicourse Tasting Menus</li>
+            <li><i class="fa-light fa-check"></i> Daily Chef's Specials</li>
+            <li><i class="fa-light fa-check"></i> Private Dining Rooms</li>
+            <li><i class="fa-light fa-check"></i> Sommelier on Request</li>
+          </ul>
+          <a href="#contact" class="service-cta"><i class="fa-light fa-arrow-right"></i> Reserve a Table</a>
+        </div>
+
+        <div class="service-card featured">
+          <div class="service-badge">Most Popular</div>
+          <div class="service-icon"><i class="fa-light fa-party-horn"></i></div>
+          <div class="service-glow"></div>
+          <h3>Event Hosting</h3>
+          <p>Whether it's an intimate proposal or a 200-guest corporate dinner, The April Celebrations transforms vision into vivid reality. Our events team handles décor, catering, entertainment curation and logistics so you can simply be present and breathe it all in.</p>
+          <ul class="service-features">
+            <li><i class="fa-light fa-check"></i> Corporate Dinners & Galas</li>
+            <li><i class="fa-light fa-check"></i> Birthdays & Anniversaries</li>
+            <li><i class="fa-light fa-check"></i> Engagements & Proposals</li>
+            <li><i class="fa-light fa-check"></i> Brunch Parties & Brunches</li>
+          </ul>
+          <a href="#contact" class="service-cta"><i class="fa-light fa-arrow-right"></i> Plan Your Event</a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-light fa-spa"></i></div>
+          <div class="service-glow"></div>
+          <h3>Sunshine Spa</h3>
+          <p>Our in-house wellness retreat is the perfect complement to a luxury dining experience. The Sunshine Spa offers a curated menu of treatments designed to restore your inner glow, using premium aromatherapy and expert hands.</p>
+          <ul class="service-features">
+            <li><i class="fa-light fa-check"></i> Full-Body Massages</li>
+            <li><i class="fa-light fa-check"></i> Facial Treatments</li>
+            <li><i class="fa-light fa-check"></i> Couples Packages</li>
+            <li><i class="fa-light fa-check"></i> Pre-Event Glow Packages</li>
+          </ul>
+          <a href="#contact" class="service-cta"><i class="fa-light fa-arrow-right"></i> Book a Session</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU HIGHLIGHTS -->
+  <section class="menu-section section" id="menu">
+    <div class="container">
+      <p class="section-eyebrow centered"><i class="fa-light fa-utensils"></i> Taste & Flavour</p>
+      <h2 class="section-title centered">A Menu That <em>Tells Stories</em></h2>
+      <p class="section-sub centered">Crafted with locally-sourced Nigerian ingredients, elevated with global technique. Dress code: Business Casual or Formal required.</p>
+
+      <div class="menu-tabs">
+        <button class="tab active" data-tab="starters">Starters</button>
+        <button class="tab" data-tab="mains">Mains</button>
+        <button class="tab" data-tab="desserts">Desserts</button>
+        <button class="tab" data-tab="drinks">Drinks</button>
+      </div>
+
+      <div class="menu-grid" id="menuGrid">
+        <!-- Starters -->
+        <div class="menu-items active" data-content="starters">
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4>Suya-Spiced Tuna Tartare</h4>
+              <p>Fresh Atlantic tuna, suya spice crust, avocado cream, yuzu gel, toasted brioche</p>
+            </div>
+            <span class="mi-price">₦6,500</span>
+          </div>
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4>Peppersoup Velouté</h4>
+              <p>Traditional catfish peppersoup reimagined as a silky velouté, truffle oil, herb oil</p>
+            </div>
+            <span class="mi-price">₦5,200</span>
+          </div>
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4>Smoked Goat Cheese Bruschetta</h4>
+              <p>Local goat cheese, oven-dried tomatoes, balsamic pearls, micro herbs</p>
+            </div>
+            <span class="mi-price">₦4,800</span>
+          </div>
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4>Grilled Tiger Prawns</h4>
+              <p>Coastal tiger prawns, lemon butter, ogiri aioli, chilli threads</p>
+            </div>
+            <span class="mi-price">₦8,200</span>
+          </div>
+        </div>
+
+        <!-- Mains -->
+        <div class="menu-items" data-content="mains">
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4>Jollof-Infused Wagyu Short Rib</h4>
+              <p>36-hour Wagyu short rib, jollof reduction, plantain espuma, crispy onions</p>
+            </div>
+            <span class="mi-price">₦28,000</span>
+          </div>
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4>Pan-Seared Sea Bass</h4>
+              <p>Atlantic sea bass, banga broth, coconut cream, fried plantain, fresh coriander</p>
+            </div>
+            <span class="mi-price">₦18,500</span>
+          </div>
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4>Lamb Cannon, Egusi Crust</h4>
+              <p>Rack of lamb, egusi herb crust, red wine jus, cassava fondant, seasonal greens</p>
+            </div>
+            <span class="mi-price">₦22,000</span>
+          </div>
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4>Truffle Mushroom Risotto</h4>
+              <p>Arborio rice, wild mushrooms, black truffle, aged parmesan, chive oil</p>
+            </div>
+            <span class="mi-price">₦14,500</span>
+          </div>
+        </div>
+
+        <!-- Desserts -->
+        <div class="menu-items" data-content="desserts">
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4>Chocolate & Palm Wine Fondant</h4>
+              <p>Warm dark chocolate fondant, palm wine caramel, vanilla bean ice cream</p>
+            </div>
+            <span class="mi-price">₦5,500</span>
+          </div>
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4>Mango Panna Cotta</h4>
+              <p>Alphonso mango, coconut milk panna cotta, passion fruit coulis, gold leaf</p>
+            </div>
+            <span class="mi-price">₦4,800</span>
+          </div>
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4>Hibiscus Sorbet</h4>
+              <p>Nigerian hibiscus (zobo) sorbet, candied orange, ginger snap tuile</p>
+            </div>
+            <span class="mi-price">₦3,500</span>
+          </div>
+        </div>
+
+        <!-- Drinks -->
+        <div class="menu-items" data-content="drinks">
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4>The April Signature Cocktail</h4>
+              <p>Hibiscus-infused gin, elderflower, fresh citrus, edible gold flakes, rose garnish</p>
+            </div>
+            <span class="mi-price">₦7,500</span>
+          </div>
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4>Plum Noir Spritz</h4>
+              <p>Aged plum wine, prosecco, lavender bitters, candied plum</p>
+            </div>
+            <span class="mi-price">₦6,200</span>
+          </div>
+          <div class="menu-item">
+            <div class="mi-info">
+              <h4>Cold-Pressed Wellness Elixir</h4>
+              <p>Ginger, turmeric, pineapple, mint — the spa in a glass</p>
+            </div>
+            <span class="mi-price">₦3,800</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-cta-row">
+        <p>Menus rotate seasonally. Reservations recommended for private sections.</p>
+        <a href="tel:+2347061773768" class="btn-primary"><i class="fa-light fa-phone"></i> Call to Reserve</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS (Google Style) -->
+  <section class="reviews section" id="reviews">
+    <div class="container">
+      <p class="section-eyebrow centered"><i class="fa-light fa-star"></i> Client Reviews</p>
+      <h2 class="section-title centered">Words From Our <em>Guests</em></h2>
+
+      <!-- Google-style aggregate -->
+      <div class="reviews-aggregate">
+        <div class="agg-score">
+          <span class="agg-number">4.9</span>
+          <div class="agg-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <span class="agg-count">Based on 214 reviews</span>
+          <div class="agg-source"><i class="fa-brands fa-google"></i> Google Reviews</div>
+        </div>
+        <div class="agg-bars">
+          <div class="bar-row"><span>5</span><i class="fa-solid fa-star"></i><div class="bar-track"><div class="bar-fill" style="width:89%"></div></div><span>89%</span></div>
+          <div class="bar-row"><span>4</span><i class="fa-solid fa-star"></i><div class="bar-track"><div class="bar-fill" style="width:8%"></div></div><span>8%</span></div>
+          <div class="bar-row"><span>3</span><i class="fa-solid fa-star"></i><div class="bar-track"><div class="bar-fill" style="width:2%"></div></div><span>2%</span></div>
+          <div class="bar-row"><span>2</span><i class="fa-solid fa-star"></i><div class="bar-track"><div class="bar-fill" style="width:1%"></div></div><span>1%</span></div>
+          <div class="bar-row"><span>1</span><i class="fa-solid fa-star"></i><div class="bar-track"><div class="bar-fill" style="width:0%"></div></div><span>0%</span></div>
+        </div>
+      </div>
+
+      <!-- Review Cards -->
+      <div class="reviews-grid">
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar" style="background: linear-gradient(135deg, #B44FFF, #7B2FBE)">CN</div>
+            <div class="reviewer-info">
+              <h5>Chisom Nwosu</h5>
+              <span class="reviewer-meta"><i class="fa-brands fa-google"></i> Google · 2 weeks ago</span>
+            </div>
+            <div class="review-verified"><i class="fa-solid fa-circle-check"></i></div>
+          </div>
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">"I've dined at restaurants across Lagos and Abuja and honestly, The April Celebrations rivals them all. The Eden Bay London menu is phenomenal — the Wagyu Short Rib had me in complete silence. The Plum Noir interior alone is worth the visit. Absolutely world class for Uyo."</p>
+          <div class="review-like"><i class="fa-light fa-thumbs-up"></i> <span>47 people found this helpful</span></div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar" style="background: linear-gradient(135deg, #C9A84C, #8B6914)">AE</div>
+            <div class="reviewer-info">
+              <h5>Adaeze Ekezie</h5>
+              <span class="reviewer-meta"><i class="fa-brands fa-google"></i> Google · 1 month ago</span>
+            </div>
+            <div class="review-verified"><i class="fa-solid fa-circle-check"></i></div>
+          </div>
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">"We hosted our company's annual gala here and it was flawless from start to finish. The events team understood our vision immediately. Décor was breathtaking — they transformed the space into something out of a magazine. Every single guest was impressed. We'll be back next year without question."</p>
+          <div class="review-like"><i class="fa-light fa-thumbs-up"></i> <span>32 people found this helpful</span></div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar" style="background: linear-gradient(135deg, #F2C4CE, #C96B7A)">BU</div>
+            <div class="reviewer-info">
+              <h5>Biodun Umoh</h5>
+              <span class="reviewer-meta"><i class="fa-brands fa-google"></i> Google · 3 weeks ago</span>
+            </div>
+            <div class="review-verified"><i class="fa-solid fa-circle-check"></i></div>
+          </div>
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">"The Sunshine Spa session followed by dinner was the most indulgent evening I've had in Uyo. The staff treat you like royalty from the moment you walk in. The attention to detail — the scent, the music, the lighting — it's curated to perfection. This is what luxury looks like in Akwa Ibom."</p>
+          <div class="review-like"><i class="fa-light fa-thumbs-up"></i> <span>28 people found this helpful</span></div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar" style="background: linear-gradient(135deg, #4FC3F7, #0288D1)">KO</div>
+            <div class="reviewer-info">
+              <h5>Kelechi Obi</h5>
+              <span class="reviewer-meta"><i class="fa-brands fa-google"></i> Google · 5 days ago</span>
+            </div>
+            <div class="review-verified"><i class="fa-solid fa-circle-check"></i></div>
+          </div>
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+          </div>
+          <p class="review-text">"Celebrated my wife's 40th birthday here and she cried tears of joy — that tells you everything. The private section is stunning, the food is exquisite, and the team went above and beyond with custom décor. Minus one star only because parking can get full on weekends. Still absolutely 10/10 experience."</p>
+          <div class="review-like"><i class="fa-light fa-thumbs-up"></i> <span>19 people found this helpful</span></div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar" style="background: linear-gradient(135deg, #81C784, #388E3C)">SA</div>
+            <div class="reviewer-info">
+              <h5>Stella Akpan</h5>
+              <span class="reviewer-meta"><i class="fa-brands fa-google"></i> Google · 2 months ago</span>
+            </div>
+            <div class="review-verified"><i class="fa-solid fa-circle-check"></i></div>
+          </div>
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">"Every visit feels like the first time. The hibiscus cocktail alone is enough reason to come every weekend. The April Signature isn't just a restaurant, it's a whole lifestyle. I've brought three different groups here and every single time they say the same thing — why didn't we know about this place sooner?"</p>
+          <div class="review-like"><i class="fa-light fa-thumbs-up"></i> <span>41 people found this helpful</span></div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar" style="background: linear-gradient(135deg, #FF8A65, #E64A19)">EI</div>
+            <div class="reviewer-info">
+              <h5>Emeka Ilo</h5>
+              <span class="reviewer-meta"><i class="fa-brands fa-google"></i> Google · 1 week ago</span>
+            </div>
+            <div class="review-verified"><i class="fa-solid fa-circle-check"></i></div>
+          </div>
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">"Came for a business lunch and ended up closing a deal over the most impressive spread. The professional atmosphere, the crisp service, the impeccable food — it all creates an environment where you can't help but feel confident. My clients were blown away. The April Celebrations is now my go-to for every important meeting."</p>
+          <div class="review-like"><i class="fa-light fa-thumbs-up"></i> <span>23 people found this helpful</span></div>
+        </div>
+
+      </div>
+
+      <div class="reviews-cta-row">
+        <a href="https://g.page/r/theaprilcelebrations/review" target="_blank" class="btn-primary">
+          <i class="fa-brands fa-google"></i> Leave a Google Review
+        </a>
+        <a href="https://instagram.com/theaprilsignature" target="_blank" class="btn-ghost">
+          <i class="fa-brands fa-instagram"></i> Share on Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- POLICIES STRIP -->
+  <section class="policies-strip">
+    <div class="container">
+      <div class="policies-grid">
+        <div class="policy-item">
+          <i class="fa-light fa-clock"></i>
+          <div>
+            <h5>Opening Hours</h5>
+            <p>Daily · 8:00 AM – 10:00 PM</p>
+          </div>
+        </div>
+        <div class="policy-item">
+          <i class="fa-light fa-shirt"></i>
+          <div>
+            <h5>Dress Code</h5>
+            <p>Business Casual or Formal · Strictly enforced</p>
+          </div>
+        </div>
+        <div class="policy-item">
+          <i class="fa-light fa-camera"></i>
+          <div>
+            <h5>Photography</h5>
+            <p>₦3,000 min spend · Free at your table</p>
+          </div>
+        </div>
+        <div class="policy-item">
+          <i class="fa-light fa-calendar-check"></i>
+          <div>
+            <h5>Reservations</h5>
+            <p>Walk-ins welcome · Booking required for private sections</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <p class="section-eyebrow centered"><i class="fa-light fa-location-dot"></i> Find Us</p>
+      <h2 class="section-title centered">Get in <em>Touch</em></h2>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="ci-item">
+            <div class="ci-icon"><i class="fa-light fa-location-dot"></i></div>
+            <div>
+              <h5>Address</h5>
+              <p>Plot A, 105 Lagos Street<br/>Ewet Housing Estate<br/>Uyo, Akwa Ibom State</p>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon"><i class="fa-light fa-phone"></i></div>
+            <div>
+              <h5>Phone Numbers</h5>
+              <p><a href="tel:+2347061773768">+234 706 177 3768</a><br/><a href="tel:+2347030267652">+234 703 026 7652</a></p>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon"><i class="fa-light fa-envelope"></i></div>
+            <div>
+              <h5>Email</h5>
+              <p><a href="mailto:chatwithtac@gmail.com">chatwithtac@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="ci-item">
+            <div class="ci-icon"><i class="fa-brands fa-instagram"></i></div>
+            <div>
+              <h5>Instagram</h5>
+              <p><a href="https://instagram.com/theaprilsignature" target="_blank">@theaprilsignature</a><br/><a href="https://instagram.com/backup_aprilcelebrations" target="_blank">@backup_aprilcelebrations</a></p>
+            </div>
+          </div>
+
+          <div class="contact-socials">
+            <a href="https://instagram.com/theaprilsignature" target="_blank" class="social-pill"><i class="fa-brands fa-instagram"></i> Instagram</a>
+            <a href="https://facebook.com" target="_blank" class="social-pill"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+            <a href="https://wa.me/2347061773768" target="_blank" class="social-pill"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm">
+            <h4>Send an Enquiry</h4>
+            <div class="form-row">
+              <div class="form-group">
+                <label><i class="fa-light fa-user"></i> Your Name</label>
+                <input type="text" placeholder="e.g. Chisom Nwosu" required />
+              </div>
+              <div class="form-group">
+                <label><i class="fa-light fa-envelope"></i> Email</label>
+                <input type="email" placeholder="your@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label><i class="fa-light fa-phone"></i> Phone Number</label>
+              <input type="tel" placeholder="+234 800 000 0000" />
+            </div>
+            <div class="form-group">
+              <label><i class="fa-light fa-list"></i> Type of Enquiry</label>
+              <select>
+                <option>Dinner Reservation</option>
+                <option>Private Event Booking</option>
+                <option>Spa Appointment</option>
+                <option>General Enquiry</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label><i class="fa-light fa-comment"></i> Message</label>
+              <textarea rows="4" placeholder="Tell us about your occasion, preferred date, party size..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary full-width"><i class="fa-light fa-paper-plane"></i> Send Enquiry</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS TICKER -->
+  <section class="highlights-section" id="highlights">
+    <div class="container">
+      <p class="section-eyebrow centered"><i class="fa-light fa-images"></i> Highlights</p>
+      <h2 class="section-title centered">Moments That <em>Define Us</em></h2>
+      <p class="section-sub centered">A glimpse into the world of The April Celebrations — where every frame tells a story of elegance.</p>
+    </div>
+
+    <div class="highlights-ticker-wrap">
+      <!-- Row 1: left to right -->
+      <div class="hl-track hl-track--fwd">
+        <div class="hl-item">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&q=75" alt="Fine Dining" loading="lazy"/>
+          <div class="hl-label"><i class="fa-light fa-utensils"></i> Fine Dining</div>
+        </div>
+        <div class="hl-item">
+          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=500&q=75" alt="Eden Bay London" loading="lazy"/>
+          <div class="hl-label"><i class="fa-light fa-star-sharp"></i> Eden Bay London</div>
+        </div>
+        <div class="hl-item">
+          <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500&q=75" alt="Private Events" loading="lazy"/>
+          <div class="hl-label"><i class="fa-light fa-party-horn"></i> Private Events</div>
+        </div>
+        <div class="hl-item">
+          <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=500&q=75" alt="Sunshine Spa" loading="lazy"/>
+          <div class="hl-label"><i class="fa-light fa-spa"></i> Sunshine Spa</div>
+        </div>
+        <!-- Duplicated for seamless loop -->
+        <div class="hl-item">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&q=75" alt="Fine Dining" loading="lazy"/>
+          <div class="hl-label"><i class="fa-light fa-utensils"></i> Fine Dining</div>
+        </div>
+        <div class="hl-item">
+          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=500&q=75" alt="Eden Bay London" loading="lazy"/>
+          <div class="hl-label"><i class="fa-light fa-star-sharp"></i> Eden Bay London</div>
+        </div>
+        <div class="hl-item">
+          <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500&q=75" alt="Private Events" loading="lazy"/>
+          <div class="hl-label"><i class="fa-light fa-party-horn"></i> Private Events</div>
+        </div>
+        <div class="hl-item">
+          <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=500&q=75" alt="Sunshine Spa" loading="lazy"/>
+          <div class="hl-label"><i class="fa-light fa-spa"></i> Sunshine Spa</div>
+        </div>
+      </div>
+
+      <!-- Row 2: right to left -->
+      <div class="hl-track hl-track--rev">
+        <div class="hl-item hl-tall">
+          <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=500&q=75" alt="Spa" loading="lazy"/>
+          <div class="hl-label"><i class="fa-light fa-gem"></i> Luxury Wellness</div>
+        </div>
+        <div class="hl-item hl-tall">
+          <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500&q=75" alt="Events" loading="lazy"/>
+          <div class="hl-label"><i class="fa-light fa-champagne-glasses"></i> Celebrations</div>
+        </div>
+        <div class="hl-item hl-tall">
+          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=500&q=75" alt="Dining" loading="lazy"/>
+          <div class="hl-label"><i class="fa-light fa-crown"></i> Refined Dining</div>
+        </div>
+        <div class="hl-item hl-tall">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&q=75" alt="Interior" loading="lazy"/>
+          <div class="hl-label"><i class="fa-light fa-flower"></i> Plum Noir Interior</div>
+        </div>
+        <!-- Duplicated for seamless loop -->
+        <div class="hl-item hl-tall">
+          <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?w=500&q=75" alt="Spa" loading="lazy"/>
+          <div class="hl-label"><i class="fa-light fa-gem"></i> Luxury Wellness</div>
+        </div>
+        <div class="hl-item hl-tall">
+          <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=500&q=75" alt="Events" loading="lazy"/>
+          <div class="hl-label"><i class="fa-light fa-champagne-glasses"></i> Celebrations</div>
+        </div>
+        <div class="hl-item hl-tall">
+          <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=500&q=75" alt="Dining" loading="lazy"/>
+          <div class="hl-label"><i class="fa-light fa-crown"></i> Refined Dining</div>
+        </div>
+        <div class="hl-item hl-tall">
+          <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&q=75" alt="Interior" loading="lazy"/>
+          <div class="hl-label"><i class="fa-light fa-flower"></i> Plum Noir Interior</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlights-cta">
+      <a href="https://instagram.com/theaprilsignature" target="_blank" class="btn-primary">
+        <i class="fa-brands fa-instagram"></i> Follow Us on Instagram
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark">T<em>A</em>C</span>
+        <p>The April Celebrations</p>
+        <span>Plot A, 105 Lagos Street, Ewet Housing Estate, Uyo · Open Daily 8AM–10PM</span>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#menu">Menu</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://instagram.com/theaprilsignature" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://wa.me/2347061773768" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        <a href="mailto:chatwithtac@gmail.com"><i class="fa-light fa-envelope"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 The April Celebrations · Uyo, Akwa Ibom State. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- FLOATING BUTTONS -->
+  <a href="https://wa.me/2347061773768" target="_blank" class="float-whatsapp" aria-label="Chat on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="float-tooltip">Chat with us</span>
+  </a>
+
+  <button class="float-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-light fa-chevron-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
